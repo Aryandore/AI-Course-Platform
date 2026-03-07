@@ -13,3 +13,23 @@ class UserResponse(BaseModel):
 
     class Config:
         from_attributes = True
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str
+
+class CourseCreate(BaseModel):
+    title: str
+    description: str
+    price: int
+
+
+class CourseResponse(BaseModel):
+    id: int
+    title: str
+    description: str
+    price: int
+    instructor_id: int
+
+    class Config:
+        from_attributes = True
